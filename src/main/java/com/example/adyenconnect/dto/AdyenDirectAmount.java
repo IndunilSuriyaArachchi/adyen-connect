@@ -3,7 +3,7 @@ package com.example.adyenconnect.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
-public class Amount {
+public class AdyenDirectAmount {
 	
 	private int value;
 

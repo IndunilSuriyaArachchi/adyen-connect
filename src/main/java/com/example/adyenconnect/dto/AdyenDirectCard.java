@@ -2,7 +2,7 @@ package com.example.adyenconnect.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
-public class Card {
+public class AdyenDirectCard {
 	
 	private String number;
 	private String expiryMonth;

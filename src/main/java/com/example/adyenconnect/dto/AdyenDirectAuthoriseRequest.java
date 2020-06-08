@@ -3,22 +3,22 @@ package com.example.adyenconnect.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
 @JsonIgnoreType
-public class AuthoriseRequest {
+public class AdyenDirectAuthoriseRequest {
 	
-	private Card card;
-	private Amount amount;
+	private AdyenDirectCard card;
+	private AdyenDirectAmount amount;
 	private String reference;
 	private String  merchantAccount;
-	public Card getCard() {
+	public AdyenDirectCard getCard() {
 		return card;
 	}
-	public void setCard(Card card) {
+	public void setCard(AdyenDirectCard card) {
 		this.card = card;
 	}
-	public Amount getAmount() {
+	public AdyenDirectAmount getAmount() {
 		return amount;
 	}
-	public void setAmount(Amount amount) {
+	public void setAmount(AdyenDirectAmount amount) {
 		this.amount = amount;
 	}
 	public String getReference() {

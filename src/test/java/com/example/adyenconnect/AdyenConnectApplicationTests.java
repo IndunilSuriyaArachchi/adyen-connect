@@ -18,9 +18,9 @@ import org.springframework.web.client.RestTemplate;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 
-import com.example.adyenconnect.dto.Amount;
-import com.example.adyenconnect.dto.AuthoriseRequest;
-import com.example.adyenconnect.dto.Card;
+import com.example.adyenconnect.dto.AdyenDirectAmount;
+import com.example.adyenconnect.dto.AdyenDirectAuthoriseRequest;
+import com.example.adyenconnect.dto.AdyenDirectCard;
 import com.example.adyenconnect.dto.PayMethods;
 import com.example.adyenconnect.dto.Quote;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -84,7 +84,7 @@ class AdyenConnectApplicationTests {
         System.out.println("responseBody --->" + responseBody);
 	}*/
 	
-	@Test
+	/*@Test
 	public void testAdyenAuthorise() {
 		String userCredentials = "ws@Company.TestAccount516:8.,3JV4ImvEux@>tQ9HD}q58q";
 		String basicAuth = "Basic " +  new String(Base64.getEncoder().encode(userCredentials.getBytes()));
@@ -96,18 +96,18 @@ class AdyenConnectApplicationTests {
 		headers.add("Authorization", basicAuth);
        // headers.setBasicAuth(basicAuth);
 
-        Card card=new Card();
+        AdyenDirectCard card=new AdyenDirectCard();
         card.setNumber("5101180000000007");
         card.setExpiryMonth("03");
         card.setExpiryYear("2030");
         card.setCvc("737");
         card.setHolderName("test myne");
         
-        Amount amount=new Amount();
+        AdyenDirectAmount amount=new AdyenDirectAmount();
         amount.setCurrency("EUR");
         amount.setValue(1200);
         
-        AuthoriseRequest authoriseRequest=new AuthoriseRequest();
+        AdyenDirectAuthoriseRequest authoriseRequest=new AdyenDirectAuthoriseRequest();
         authoriseRequest.setAmount(amount);
         authoriseRequest.setCard(card);
         authoriseRequest.setMerchantAccount("TestAccount516ECOM");
@@ -154,6 +154,6 @@ class AdyenConnectApplicationTests {
         responseBody = responseEntity.getBody().toString();
         System.out.println("responseBody --->" + responseBody);
 		
-	}
+	}*/
 
 }
